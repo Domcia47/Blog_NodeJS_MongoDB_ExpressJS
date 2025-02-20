@@ -13,7 +13,7 @@ router.get('', async (req, res) => {
   
       let numPostsPage = 5;
 
-      let pageNum = req.query.pageNum || 1;
+      let pageNum = req.query.page || 1;
   
       const data = await Post.aggregate([ { $sort: { createdDate: -1 } } ])
       .skip(numPostsPage * pageNum - numPostsPage)
