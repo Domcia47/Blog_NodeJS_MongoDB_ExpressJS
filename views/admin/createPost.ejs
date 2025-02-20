@@ -1,0 +1,17 @@
+<a href="/adminPanel">&larr; Wstecz</a>
+<div class="admin-title">
+  <h2>Dodawanie nowego wpisu</h2>
+</div>
+
+<form action="/createPost" method="POST">
+
+  <label for="title"><b>Tytuł</b></label>
+  <input type="text" placeholder="tytuł" name="title">
+  <label for="cathegory"><b>Kategoria</b></label>
+  <input type="text" placeholder="kategoria" name="cathegory">
+  <label for="body"><b>Treść posta</b></label>
+  <textarea name="body" cols="50" rows="10" placeholder="treść posta"></textarea>
+
+  <input type="submit" value="Dodaj wpis" class="btn">
+
+</form>

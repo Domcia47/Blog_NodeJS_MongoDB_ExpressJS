@@ -1,0 +1,19 @@
+<div class="home">
+    <h1 class = "home__heading">Wyniki wyszukiwania</h1>
+</div>
+
+<section class = "articles">
+    <h3 class ="articles__heading">Najnowsze wpisy</h3>
+    <ul class="articles_list">
+
+        <% data.forEach(post => { %>
+        <li>
+            <a href = "/post/<%= post._id %>">
+                <span><%= post.title %></span>
+                <span class = "articles_list__date"><%=post.createdDate.toLocaleDateString("pl-PL")%></span>
+            </a>
+        </li>
+        <% }) %>
+
+    </ul>
+</section>

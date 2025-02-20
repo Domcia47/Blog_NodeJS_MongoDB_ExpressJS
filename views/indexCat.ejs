@@ -1,0 +1,22 @@
+
+<section class = "articles">
+    <% if (locals.title.includes('Kategoria')) { %>
+        <h2><%= locals.title %></h2>
+    <% } %>
+    <ul class="articles_list">
+
+        <% data.forEach(post => { %>
+        <li>
+            <a href = "/post/<%= post._id %>">
+                <span><%= post.title %></span>
+                <span class = "articles_list__date"><%=post.createdDate.toLocaleDateString("pl-PL")%></span>
+            </a>
+        </li>
+        <% }) %>
+
+    </ul>
+
+    <% if (nextPage !== null) { %>
+        <a href="/?page=<%= nextPage %>" class="pagination">&lt; Pokaż starsze posty</a>
+      <% } %>
+</section>

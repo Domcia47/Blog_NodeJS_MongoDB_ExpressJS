@@ -1,0 +1,21 @@
+<a href="/adminPanel">&larr; Wstecz</a>
+<div class="admin-title">
+  <h2>Edycja posta</h2>
+  <form action="/deletePost/<%= data._id %>?_method=DELETE" method="POST">
+    <input type="submit" value="Usuń" class="btn-delete btn">
+  </form>
+</div>
+
+<form action="/editPost/<%= data._id %>?_method=PUT" method="POST">
+
+  <label for="title"><b>Tytuł</b></label>
+  <input type="text" placeholder="Post Title" name="title" value = "<%= data.title %>">
+
+  <label for="cathegory"><b>Kategoria</b></label>
+  <input type="text" placeholder="kategoria" name="cathegory" value = "<%= data.cathegory %>">
+
+  <label for="body"><b>Treść posta</b></label>
+  <textarea name="body" cols="50" rows="10" ><%= data.body %></textarea>
+
+  <input type="submit" value="Zatwierdź" class="btn">
+</form>
